@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campaign Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            margin: 20px auto;
+        }
+        .campaign {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .campaign h2 {
+            margin-top: 0;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-group input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Campaign 1 -->
+        <div class="campaign">
+            <h2>Name of the Campaign</h2>
+            <div class="form-group">
+                <label for="location1">Location</label>
+                <input type="text" id="location1" name="location1">
+            </div>
+            <div class="form-group">
+                <label for="schedule1">Schedule</label>
+                <input type="text" id="schedule1" name="schedule1">
+            </div>
+            <div class="form-group">
+                <label for="endsin1">Ends in</label>
+                <input type="text" id="endsin1" name="endsin1">
+            </div>
+            <div class="form-group">
+                <label for="vaccinename1">Vaccine name</label>
+                <input type="text" id="vaccinename1" name="vaccinename1">
+            </div>
+        </div>
+
+        <!-- Campaign 2 -->
+        <div class="campaign">
+            <h2>Name of the Campaign</h2>
+            <div class="form-group">
+                <label for="location2">Location</label>
+                <input type="text" id="location2" name="location2">
+            </div>
+            <div class="form-group">
+                <label for="schedule2">Schedule</label>
+                <input type="text" id="schedule2" name="schedule2">
+            </div>
+            <div class="form-group">
+                <label for="endsin2">Ends in</label>
+                <input type="text" id="endsin2" name="endsin2">
+            </div>
+            <div class="form-group">
+                <label for="vaccinename2">Vaccine name</label>
+                <input type="text" id="vaccinename2" name="vaccinename2">
+            </div>
+        </div>
+
+        <!-- Additional campaigns can be added here in a similar way -->
+    </div>
+</body>
+</html>
