@@ -427,3 +427,28 @@ section h2 {
 .footer .text-center {
     text-align: center;
 }
+/* Adjust social media icon sizes */
+.social-icon {
+    width: 30px; /* Set the desired width */
+    height: 30px; /* Set the desired height */
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1); /* Slightly enlarge the icon on hover */
+}
+#benefits ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+#benefits ul li::before {
+    content: "\2022"; /* Unicode for bullet point */
+    color: #007bff; /* Change color to match your theme */
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
