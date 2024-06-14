@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeshCare</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        nav {
+            background-color: #ea580c;
+        }
+
+        .selected {
+            background-color: #fb923c;
+        }
+
+        nav a:hover {
+            background-color: #fb923c;
+        }
+    </style>
+</head>
+<body class="">
+    <!-- Navigation Bar -->
+    <nav class="bg-orange-600 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Logo / Site Name -->
+            <div class="text-white text-lg font-bold">
+                DeshCare Vaccine
+            </div>
+            <!-- Navigation Links -->
+            <div class="flex space-x-4">
+                <a href="homepage.html" class="selected text-white bg-gray-700 px-3 py-2 rounded">Vaccines</a>
+                <a href="history.html" class="text-gray-300 hover:text-white px-3 py-2 rounded ">History</a>
+                <a href="medicalprofile.html" class="text-gray-300 hover:text-white px-3 py-2 rounded ">Medical Profile</a>
+            </div>
+            <!-- User Icon -->
+            <div class="flex items-center">
+                <div class="w-8 h-8 bg-gray-600 rounded-full flex items-center justify-center text-white">
+                    <span class="font-bold">U</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Vaccines Section -->
+    <section id="vaccines" class="container mx-auto mt-6">
+        <h2 class="text-2xl font-bold mb-4">Available Vaccines</h2>
+        <div class="space-y-6">
+            <!-- Vaccine Card 1 -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-2xl font-semibold mb-2">Flu Vaccine</h3>
+                <p class="text-gray-600 mb-1"><strong>Brand:</strong> FluShield</p>
+                <p class="text-gray-600 mb-1"><strong>Disease Targeted:</strong> Influenza</p>
+                <p class="text-gray-600 mb-1"><strong>Dosage Profile:</strong> One dose annually</p>
+                <p class="text-gray-600"><strong>Description:</strong> FluShield is an annual vaccine that protects against the most common strains of influenza. It is particularly recommended for the elderly and those with weakened immune systems.</p>
+            </div>
+            <!-- Vaccine Card 2 -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-2xl font-semibold mb-2">COVID-19 Vaccine</h3>
+                <p class="text-gray-600 mb-1"><strong>Brand:</strong> CoviGuard</p>
+                <p class="text-gray-600 mb-1"><strong>Disease Targeted:</strong> COVID-19</p>
+                <p class="text-gray-600 mb-1"><strong>Dosage Profile:</strong> Two doses, three weeks apart</p>
+                <p class="text-gray-600"><strong>Description:</strong> CoviGuard provides robust protection against COVID-19, including variants. It is highly recommended for all age groups, especially those at higher risk of severe illness.</p>
+            </div>
+            <!-- Vaccine Card 3 -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-2xl font-semibold mb-2">Shingles Vaccine</h3>
+                <p class="text-gray-600 mb-1"><strong>Brand:</strong> Shingrix</p>
+                <p class="text-gray-600 mb-1"><strong>Disease Targeted:</strong> Herpes Zoster (Shingles)</p>
+                <p class="text-gray-600 mb-1"><strong>Dosage Profile:</strong> Two doses, two to six months apart</p>
+                <p class="text-gray-600"><strong>Description:</strong> Shingrix is a highly effective vaccine to prevent shingles and its complications. It is recommended for adults over 50 years of age.</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
