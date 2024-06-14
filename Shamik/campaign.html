@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campaign Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="campaign-container">
+        <header>
+            <h1>Campaign Management</h1>
+            <button class="new-campaign-button">+ New Campaign</button>
+        </header>
+
+        <section class="campaign-form">
+            <h2>Create New Campaign</h2>
+            <form>
+                <label for="campaign-name">Campaign Name:</label>
+                <input type="text" id="campaign-name" name="campaign-name" required>
+
+                <label for="campaign-description">Description:</label>
+                <textarea id="campaign-description" name="campaign-description" required></textarea>
+
+                <label for="campaign-start">Start Date:</label>
+                <input type="date" id="campaign-start" name="campaign-start" required>
+
+                <label for="campaign-end">End Date:</label>
+                <input type="date" id="campaign-end" name="campaign-end" required>
+
+                <button type="submit">Create Campaign</button>
+            </form>
+        </section>
+
+        <section class="campaign-list">
+            <h2>Existing Campaigns</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Campaign Name</th>
+                        <th>Description</th>
+                        <th>Start Date</th>
+                        <th>End Date</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Campaign 1</td>
+                        <td>Sample Description 1</td>
+                        <td>2023-06-01</td>
+                        <td>2023-06-30</td>
+                        <td>Active</td>
+                    </tr>
+                    <tr>
+                        <td>Campaign 2</td>
+                        <td>Sample Description 2</td>
+                        <td>2023-07-01</td>
+                        <td>2023-07-31</td>
+                        <td>Upcoming</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="campaign-stats">
+            <h2>Campaign Statistics</h2>
+            <div class="stats-container">
+                <div class="stat-box">
+                    <h3>Total Campaigns</h3>
+                    <p>10</p>
+                </div>
+                <div class="stat-box">
+                    <h3>Active Campaigns</h3>
+                    <p>5</p>
+                </div>
+                <div class="stat-box">
+                    <h3>Upcoming Campaigns</h3>
+                    <p>3</p>
+                </div>
+                <div class="stat-box">
+                    <h3>Completed Campaigns</h3>
+                    <p>2</p>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
