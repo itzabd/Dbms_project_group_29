@@ -1,0 +1,193 @@
+/* General Body Styling */
+body {
+    background-color: #A0DEFF;
+    padding-top: 70px; /* Adjusted to accommodate fixed navbar */
+    margin: 0; /* Reset margin to eliminate the gap */
+    overflow-x: hidden;
+}
+
+/* Navigation Bar Styling */
+nav {
+    background-color: #f07109;
+    border-bottom: 2px solid #000000;
+}
+
+.navbar {
+    background-color: #FF7D29;
+    padding: 1rem 2rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar-brand {
+    background-color: #F5FEFF;
+    border: 2px solid #000000; /* Soft border */
+    border-radius: 5px; /* Rounded corners for the soft border */
+    padding: 0.5rem 1rem;
+    font-family: monospace;
+    font-weight: bold;
+}
+
+.navbar-nav {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.navbar .nav-link {
+    color: #fff; /* White text color for better contrast */
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+}
+
+.navbar .nav-link:hover {
+    color: #A0DEFF; /* Change color on hover */
+    text-decoration: underline;
+}
+
+/* Dropdown Menu Styling */
+.nav-item .dropdown-menu {
+    background-color: #FF7D29; /* Match the navbar background color */
+    border: none; /* Remove border */
+    border-radius: 8px; /* Rounded corners for modern look */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for modern look */
+}
+
+.nav-item .dropdown-item {
+    color: #000; /* Black text color */
+    padding: 0.5rem 1rem; /* More padding for better touch target */
+}
+
+.nav-item .dropdown-item:hover {
+    background-color: #A0DEFF; /* Background color on hover */
+    color: #000; /* Black text color on hover */
+}
+
+/* Primary Button Styling */
+.btn-primary {
+    background-color: #A0DEFF;
+    border: none;
+    color: #000;
+    font-family: monospace;
+    border-radius: 0; /* Make the button rectangular */
+    padding: 0.5rem 1.5rem; /* Adjust padding for a better rectangular look */
+}
+
+.btn-appointment {
+    margin-left: auto; /* Ensure the button is pushed to the right */
+}
+
+/* Section Styling */
+section {
+    padding: 60px 0;
+}
+
+section h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+/* Carousel Item Styling */
+.carousel-item {
+    height: calc(100vh - 70px); /* Full screen minus navbar height */
+    position: relative; /* Position for overlay */
+    width: 100%;
+}
+
+.carousel-item img {
+    height: 100%; /* Ensure image covers carousel item */
+    object-fit: cover; /* Cover mode for images */
+}
+
+.carousel-caption {
+    position:absolute;
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    padding: 20px; /* Padding around caption */
+    border-radius: 10px; /* Rounded corners for caption box */
+    color: #fff; /* White text color */
+    text-align: right; /* Align text to the left */
+    max-width: 400px; /* Restrict max width */
+}
+
+.carousel-caption h5 {
+    font-size: 24px; /* Caption title font size */
+    font-weight: bold; /* Bold font for title */
+    margin-bottom: 10px; /* Space below title */
+}
+
+.carousel-caption p {
+    font-size: 18px; /* Caption text font size */
+}
+
+/* Welcome Section Styling */
+.welcome-section {
+    padding: 0; /* Remove padding to align with carousel */
+    position: relative; /* Position for overlay */
+    overflow: hidden; /* Hide overflow */
+}
+
+.welcome-message {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */
+    padding: 30px;
+    border-radius: 10px; /* Rounded corners for the message box */
+    text-align: left; /* Align text to the left */
+    max-width: 400px; /* Restrict max width */
+}
+
+.welcome-title {
+    font-size: 36px; /* Title font size */
+    font-weight: bold; /* Bold font for title */
+    margin-bottom: 20px; /* Space below title */
+}
+
+.welcome-message p {
+    margin-bottom: 20px; /* Space below paragraphs */
+}
+
+.btn-get-now {
+    background-color: #FF7D29; /* Match the navbar background color */
+    border: none; /* Remove border */
+    color: #fff; /* White text color */
+    padding: 0.5rem 1.5rem; /* Padding for the button */
+    border-radius: 5px; /* Rounded corners for the button */
+    font-weight: bold; /* Bold font for the button text */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .carousel-item {
+        height: 200px; /* Adjust carousel item height for smaller screens */
+    }
+    
+    .carousel-item img {
+        height: 200px; /* Adjust carousel image height for smaller screens */
+    }
+
+    .welcome-message {
+        top: 60%; /* Adjust position for smaller screens */
+        left: 5%; /* Adjust position for smaller screens */
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
+
+    .welcome-title {
+        font-size: 24px; /* Adjust title font size for smaller screens */
+    }
+
+    .carousel-caption {
+        top: 60%;
+        right: 5%;
+        transform: translateY(-60%);
+        font-size: 14px;
+        max-width: 250px; /* Adjust max width for smaller screens */
+    }
+}
