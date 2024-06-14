@@ -1,0 +1,204 @@
+/* General Body Styling */
+body {
+    background-color: #A0DEFF;
+    padding-top: 100px; /* Adjusted to accommodate fixed navbar */
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* Navigation Bar Styling */
+nav {
+    background-color: #f07109;
+    border-bottom: 2px solid #000000;
+}
+
+.navbar {
+    background-color: #FF7D29;
+    padding: 1rem 2rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar-brand {
+    background-color: #F5FEFF;
+    border: 2px solid #000000; /* Soft border */
+    border-radius: 5px; /* Rounded corners for the soft border */
+    padding: 0.5rem 1rem;
+    font-family: monospace;
+    font-weight: bold;
+}
+
+.navbar-nav {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.navbar .nav-link {
+    color: #fff; /* White text color for better contrast */
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    font-size: 18px; /* Increase font size */
+}
+
+.navbar .nav-link:hover {
+    color: #ffffff; /* Change color on hover */
+    text-decoration: underline;
+}
+
+/* Primary Button Styling */
+.btn-primary {
+    background-color: #ffede0;
+    border: none;
+    color: #000;
+    font-family: monospace;
+    border-radius: 25px; /* Make the button rectangular */
+    border: 2px solid #000;
+    padding: 0.5rem 1.5rem; /* Adjust padding for a better rectangular look */
+}
+
+/* Form Styling */
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #ce2222;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+.form-control {
+    width: 100%;
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Submit Button Styling */
+.btn-submit {
+    background-color: #FF7D29;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid black;
+}
+
+.btn-submit:hover {
+    background-color: #000000;
+    color: #FF7D29;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .form-container {
+        padding: 20px;
+    }
+}
+/* Updated Footer Styling */
+.footer {
+    background-color: #343a40;
+    color: #ffffff;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 14px;
+}
+
+.footer h5 {
+    font-size: 18px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.footer ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+.footer ul li {
+    margin-bottom: 10px;
+}
+
+.footer ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer ul li a:hover {
+    color: #ff7d29;
+    text-decoration: none;
+}
+
+.footer form .btn-primary {
+    background-color: #ff7d29;
+    border-color: #ff7d29;
+}
+
+.footer form .btn-primary:hover {
+    background-color: #ffffff;
+    color: #ff7d29;
+    border-color: #ff7d29;
+}
+
+.footer address {
+    margin-bottom: 20px;
+}
+
+.footer .list-inline {
+    margin-bottom: 20px;
+}
+
+.footer .list-inline-item {
+    margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+    .footer .form-inline {
+        flex-wrap: nowrap;
+    }
+    
+    .footer .list-inline-item {
+        margin-bottom: 10px;
+    }
+}
+
+.footer .container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.footer hr {
+    border-top: 1px solid #ffffff;
+    margin: 1.5rem 0;
+}
+
+.footer .text-md-right {
+    text-align: right;
+}
+
+.footer p {
+    margin-bottom: 0;
+}
+
+.footer .text-center {
+    text-align: center;
+}
