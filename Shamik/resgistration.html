@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="styles1.css">
+</head>
+<body>
+    <div class="registration-container">
+        <header>
+            <h1>Registration Form</h1>
+        </header>
+        <div class="registration-form">
+            <form>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="nid">NID Number (23 digits)</label>
+                <input type="text" id="nid" name="nid" maxlength="23" required>
+
+                <label for="age">Age</label>
+                <input type="number" id="age" name="age" required>
+
+                <label for="address">Address</label>
+                <textarea id="address" name="address" required></textarea>
+
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" name="dob" required>
+
+                <label>Gender</label>
+                <div class="radio-group">
+                    <input type="radio" id="male" name="gender" value="male" required>
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female" required>
+                    <label for="female">Female</label>
+                </div>
+
+                <label>Have a caretaker?</label>
+                <div class="radio-group">
+                    <input type="radio" id="caretaker-yes" name="caretaker" value="yes">
+                    <label for="caretaker-yes">Yes</label>
+                    <input type="radio" id="caretaker-no" name="caretaker" value="no" checked>
+                    <label for="caretaker-no">No</label>
+                </div>
+
+                <div id="caretaker-info" class="hidden">
+                    <label for="caretaker-name">Caretaker Name</label>
+                    <input type="text" id="caretaker-name" name="caretaker-name">
+
+                    <label for="caretaker-phone">Caretaker Phone Number</label>
+                    <input type="tel" id="caretaker-phone" name="caretaker-phone">
+                </div>
+
+                <label>Blood Pressure</label>
+                <div class="radio-group">
+                    <input type="radio" id="bp-yes" name="blood-pressure" value="yes">
+                    <label for="bp-yes">Yes</label>
+                    <input type="radio" id="bp-no" name="blood-pressure" value="no" checked>
+                    <label for="bp-no">No</label>
+                </div>
+
+                <label>Diabetic</label>
+                <div class="radio-group">
+                    <input type="radio" id="diabetic-yes" name="diabetic" value="yes">
+                    <label for="diabetic-yes">Yes</label>
+                    <input type="radio" id="diabetic-no" name="diabetic" value="no" checked>
+                    <label for="diabetic-no">No</label>
+                </div>
+
+                <label>Kidney Diseases</label>
+                <div class="radio-group">
+                    <input type="radio" id="kidney-yes" name="kidney" value="yes">
+                    <label for="kidney-yes">Yes</label>
+                    <input type="radio" id="kidney-no" name="kidney" value="no" checked>
+                    <label for="kidney-no">No</label>
+                </div>
+
+                <label>Heart Disease</label>
+                <div class="radio-group">
+                    <input type="radio" id="heart-yes" name="heart" value="yes">
+                    <label for="heart-yes">Yes</label>
+                    <input type="radio" id="heart-no" name="heart" value="no" checked>
+                    <label for="heart-no">No</label>
+                </div>
+
+                <label for="more-info">Any more health-related issues (optional)</label>
+                <textarea id="more-info" name="more-info"></textarea>
+
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('input[name="caretaker"]').forEach(radio => {
+            radio.addEventListener('change', function() {
+                document.getElementById('caretaker-info').classList.toggle('hidden', this.value === 'no');
+            });
+        });
+    </script>
+</body>
+</html>
