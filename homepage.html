@@ -5,20 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DeshCare</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        nav {
+            background-color: #ea580c;
+        }
+
+        .selected {
+            background-color: #fb923c;
+        }
+
+        nav a:hover {
+            background-color: #fb923c;
+        }
+    </style>
 </head>
-<body class="bg-gray-100">
+<body class="">
     <!-- Navigation Bar -->
-    <nav class="bg-gray-800 p-4">
+    <nav class="bg-orange-600 p-4">
         <div class="container mx-auto flex justify-between items-center">
             <!-- Logo / Site Name -->
             <div class="text-white text-lg font-bold">
-                DeshCare
+                DeshCare Vaccine
             </div>
             <!-- Navigation Links -->
             <div class="flex space-x-4">
-                <a href="homepage.html" class="text-white bg-gray-700 px-3 py-2 rounded">Vaccines</a>
-                <a href="history.html" class="text-gray-300 hover:text-white px-3 py-2 rounded hover:bg-gray-700">History</a>
-                <a href="medicalprofile.html" class="text-gray-300 hover:text-white px-3 py-2 rounded hover:bg-gray-700">Medical Profile</a>
+                <a href="homepage.html" class="selected text-white bg-gray-700 px-3 py-2 rounded">Vaccines</a>
+                <a href="history.html" class="text-gray-300 hover:text-white px-3 py-2 rounded ">History</a>
+                <a href="medicalprofile.html" class="text-gray-300 hover:text-white px-3 py-2 rounded ">Medical Profile</a>
             </div>
             <!-- User Icon -->
             <div class="flex items-center">
