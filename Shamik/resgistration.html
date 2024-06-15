@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Form</title>
-    <link rel="stylesheet" href="styles1.css">
+    <link rel="stylesheet" href="registration.css">
 </head>
 <body>
     <div class="registration-container">
@@ -28,20 +28,24 @@
                 <label for="dob">Date of Birth</label>
                 <input type="date" id="dob" name="dob" required>
 
-                <label>Gender</label>
-                <div class="radio-group">
-                    <input type="radio" id="male" name="gender" value="male" required>
-                    <label for="male">Male</label>
-                    <input type="radio" id="female" name="gender" value="female" required>
-                    <label for="female">Female</label>
+                <div class="form-section">
+                    <label>Gender</label>
+                    <div class="radio-group">
+                        <input type="radio" id="male" name="gender" value="male" required>
+                        <label for="male">Male</label>
+                        <input type="radio" id="female" name="gender" value="female" required>
+                        <label for="female">Female</label>
+                    </div>
                 </div>
 
-                <label>Have a caretaker?</label>
-                <div class="radio-group">
-                    <input type="radio" id="caretaker-yes" name="caretaker" value="yes">
-                    <label for="caretaker-yes">Yes</label>
-                    <input type="radio" id="caretaker-no" name="caretaker" value="no" checked>
-                    <label for="caretaker-no">No</label>
+                <div class="form-section">
+                    <label>Have a caretaker?</label>
+                    <div class="radio-group">
+                        <input type="radio" id="caretaker-yes" name="caretaker" value="yes">
+                        <label for="caretaker-yes">Yes</label>
+                        <input type="radio" id="caretaker-no" name="caretaker" value="no" checked>
+                        <label for="caretaker-no">No</label>
+                    </div>
                 </div>
 
                 <div id="caretaker-info" class="hidden">
@@ -52,36 +56,44 @@
                     <input type="tel" id="caretaker-phone" name="caretaker-phone">
                 </div>
 
-                <label>Blood Pressure</label>
-                <div class="radio-group">
-                    <input type="radio" id="bp-yes" name="blood-pressure" value="yes">
-                    <label for="bp-yes">Yes</label>
-                    <input type="radio" id="bp-no" name="blood-pressure" value="no" checked>
-                    <label for="bp-no">No</label>
+                <div class="form-section">
+                    <label>Blood Pressure</label>
+                    <div class="radio-group">
+                        <input type="radio" id="bp-yes" name="blood-pressure" value="yes">
+                        <label for="bp-yes">Yes</label>
+                        <input type="radio" id="bp-no" name="blood-pressure" value="no" checked>
+                        <label for="bp-no">No</label>
+                    </div>
                 </div>
 
-                <label>Diabetic</label>
-                <div class="radio-group">
-                    <input type="radio" id="diabetic-yes" name="diabetic" value="yes">
-                    <label for="diabetic-yes">Yes</label>
-                    <input type="radio" id="diabetic-no" name="diabetic" value="no" checked>
-                    <label for="diabetic-no">No</label>
+                <div class="form-section">
+                    <label>Diabetic</label>
+                    <div class="radio-group">
+                        <input type="radio" id="diabetic-yes" name="diabetic" value="yes">
+                        <label for="diabetic-yes">Yes</label>
+                        <input type="radio" id="diabetic-no" name="diabetic" value="no" checked>
+                        <label for="diabetic-no">No</label>
+                    </div>
                 </div>
 
-                <label>Kidney Diseases</label>
-                <div class="radio-group">
-                    <input type="radio" id="kidney-yes" name="kidney" value="yes">
-                    <label for="kidney-yes">Yes</label>
-                    <input type="radio" id="kidney-no" name="kidney" value="no" checked>
-                    <label for="kidney-no">No</label>
+                <div class="form-section">
+                    <label>Kidney Diseases</label>
+                    <div class="radio-group">
+                        <input type="radio" id="kidney-yes" name="kidney" value="yes">
+                        <label for="kidney-yes">Yes</label>
+                        <input type="radio" id="kidney-no" name="kidney" value="no" checked>
+                        <label for="kidney-no">No</label>
+                    </div>
                 </div>
 
-                <label>Heart Disease</label>
-                <div class="radio-group">
-                    <input type="radio" id="heart-yes" name="heart" value="yes">
-                    <label for="heart-yes">Yes</label>
-                    <input type="radio" id="heart-no" name="heart" value="no" checked>
-                    <label for="heart-no">No</label>
+                <div class="form-section">
+                    <label>Heart Disease</label>
+                    <div class="radio-group">
+                        <input type="radio" id="heart-yes" name="heart" value="yes">
+                        <label for="heart-yes">Yes</label>
+                        <input type="radio" id="heart-no" name="heart" value="no" checked>
+                        <label for="heart-no">No</label>
+                    </div>
                 </div>
 
                 <label for="more-info">Any more health-related issues (optional)</label>
