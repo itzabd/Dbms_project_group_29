@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #A0DEFF;
+}
+
+header {
+    background-color: #f07109;
+    color: white;
+    padding: 20px 0;
+}
+
+.navbar {
+    background-color: #f07109;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+}
+
+.navbar-nav .nav-link {
+    color: white !important;
+}
+
+.container {
+    max-width: 800px;
+}
+
+.form-control {
+    background-color: white;
+}
+
+.card-header {
+    background-color: #f07109;
+    color: white;
+}
+
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 10px 0;
+}
+
+.btn-primary {
+    background-color: #f07109;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #d86105;
+}

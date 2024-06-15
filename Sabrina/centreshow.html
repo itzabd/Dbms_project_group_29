@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaccine Center Info</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="centreshowstyle.css" rel="stylesheet">
+</head>
+<body>
+    <header class="text-white text-center py-3">
+        <h1>Vaccine Center Information</h1>
+    </header>
+
+    <nav class="navbar navbar-expand-md navbar-dark">
+        <a class="navbar-brand" href="#">Vaccine Info</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Centers</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Find Vaccine Centers</h2>
+        <form>
+            <div class="form-group row">
+                <label for="chooseArea" class="col-sm-2 col-form-label">Choose Area</label>
+                <div class="col-sm-10">
+                    <select class="form-control" id="chooseArea">
+                        <option>Select Area</option>
+                        <option value="area1">Area 1</option>
+                        <option value="area2">Area 2</option>
+                        <option value="area3">Area 3</option>
+                        <!-- Add more areas as needed -->
+                    </select>
+                </div>
+            </div>
+        </form>
+
+        <div class="card mb-4">
+            <div class="card-header">
+                Center 1
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Center Name: Vaccine Center 1</h5>
+                <p class="card-text">Address: 123 Main Street, Area 1</p>
+                <p class="card-text">Vaccine Availability: Available</p>
+                <p class="card-text">Contact Info: +1234567890</p>
+                <p class="card-text">Opening Time: 8:00 AM</p>
+                <p class="card-text">Closing Time: 5:00 PM</p>
+            </div>
+        </div>
+
+        <div class="card mb-4">
+            <div class="card-header">
+                Center 2
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">Center Name: Vaccine Center 2</h5>
+                <p class="card-text">Address: 456 Elm Street, Area 2</p>
+                <p class="card-text">Vaccine Availability: Limited</p>
+                <p class="card-text">Contact Info: +0987654321</p>
+                <p class="card-text">Opening Time: 9:00 AM</p>
+                <p class="card-text">Closing Time: 6:00 PM</p>
+            </div>
+        </div>
+
+        <!-- Add more centers as needed -->
+    </div>
+
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p>&copy; 2024 Elderly Vaccination Program. All rights reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
