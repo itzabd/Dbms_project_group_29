@@ -1,0 +1,135 @@
+nav {
+    background-color: #f07109;
+    border-bottom: 2px solid #000000;
+}
+
+.navbar {
+    background-color: #FF7D29;
+    padding: 1rem 2rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar-brand {
+    background-color: #F5FEFF;
+    border: 2px solid #000000; /* Soft border */
+    border-radius: 5px; /* Rounded corners for the soft border */
+    padding: 0.5rem 1rem;
+    font-family: monospace;
+    font-weight: bold;
+}
+
+.navbar-nav {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.navbar .nav-link {
+    color: #fff; /* White text color for better contrast */
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    font-size: 18px; /* Increase font size */
+}
+
+.navbar .nav-link:hover {
+    color: #ffffff; /* Change color on hover */
+    text-decoration: underline;
+}
+
+/* Primary Button Styling */
+.btn-primary {
+    background-color: #ffede0;
+    border: none;
+    color: #000;
+    font-family: monospace;
+    border-radius: 25px; /* Make the button rectangular */
+    border: 2px solid #000;
+    padding: 0.5rem 1.5rem; /* Adjust padding for a better rectangular look */
+} 
+/* Login Button Styling */
+.btn-login {
+    background-color: #ffffff;
+    border: none;
+    color: #000000;
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid black;
+}
+
+.btn-login:hover {
+    background-color: #000000;
+    color: #FF7D29;
+}
+/* Login Inside Button Styling */
+.btn-login-inside {
+    background-color: #FF7D29;
+    border: none;
+    color: #000000;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid black;
+}
+
+.btn-login-inside:hover {
+    background-color: #000000;
+    color: #FF7D29;
+    border-radius: 25px;
+    border: 2px solid black;
+}
+
+/* Updated Dropdown Menu Styling */
+.navbar .dropdown-menu {
+    background-color: #FF7D29; /* Background color */
+    border: 2px solid #000000; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Box shadow */
+}
+
+.navbar .dropdown-menu a {
+    color: #ffffff; /* Text color */
+    font-weight: bold;
+}
+
+.navbar .dropdown-menu a:hover,
+.navbar .dropdown-menu .dropdown-item:focus {
+    background-color: #000000; /* Hover background color */
+    color: #FF7D29; /* Hover text color */
+}
+
+.navbar .dropdown-menu .dropdown-item {
+    padding: 10px 20px; /* Padding */
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+.navbar .dropdown-menu .dropdown-divider {
+    margin: 5px 0; /* Margin for divider */
+    border-color: #ffffff; /* Divider color */
+}
+
+.dropdown-menu .dropdown-item-text {
+    color: #ffffff; /* Text color for additional text */
+    font-size: 14px; /* Font size */
+    padding-left: 20px; /* Left padding */
+}
+
+.dropdown-menu .dropdown-item-text small {
+    color: #dddddd; /* Small text color */
+}
+
+/* Right-aligned dropdown */
+.dropdown-menu-right {
+    right: 0;
+    left: auto;
+}
+
+/* Left-aligned dropdown */
+.dropdown-menu-left {
+    left: 0;
+    right: auto;
+}
