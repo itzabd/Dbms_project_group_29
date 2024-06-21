@@ -1,0 +1,123 @@
+/* General Body Styling */
+.modal-footer {
+    justify-content: center;
+    border-top: none;
+}
+
+footer {
+    margin-top: 5em;
+}
+/* Updated Footer Styling */
+.footer {
+    background-color: #343a40;
+    color: #ffffff;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 14px;
+}
+
+.footer h5 {
+    font-size: 18px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.footer ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+.footer ul li {
+    margin-bottom: 10px;
+}
+
+.footer ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer ul li a:hover {
+    color: #ff7d29;
+    text-decoration: none;
+}
+
+.footer form .btn-primary {
+    background-color: #ff7d29;
+    border-color: #ff7d29;
+}
+
+.footer form .btn-primary:hover {
+    background-color: #ffffff;
+    color: #ff7d29;
+    border-color: #ff7d29;
+}
+
+.footer address {
+    margin-bottom: 20px;
+}
+
+.footer .list-inline {
+    margin-bottom: 20px;
+}
+
+.footer .list-inline-item {
+    margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+    .footer .form-inline {
+        flex-wrap: nowrap;
+    }
+    
+    .footer .list-inline-item {
+        margin-bottom: 10px;
+    }
+}
+
+.footer .container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+.footer hr {
+    border-top: 1px solid #ffffff;
+    margin: 1.5rem 0;
+}
+
+.footer .text-md-right {
+    text-align: right;
+}
+
+.footer p {
+    margin-bottom: 0;
+}
+
+.footer .text-center {
+    text-align: center;
+}
+/* Adjust social media icon sizes */
+.social-icon {
+    width: 30px; /* Set the desired width */
+    height: 30px; /* Set the desired height */
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1); /* Slightly enlarge the icon on hover */
+}
+#benefits ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+#benefits ul li::before {
+    content: "\2022"; /* Unicode for bullet point */
+    color: #007bff; /* Change color to match your theme */
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
