@@ -1,7 +1,8 @@
 /* General Body Styling */
 body {
     background-color: #A0DEFF;
-    padding-top: 100px; /* Adjusted to accommodate fixed navbar */
+    padding-top: 80px; /* Adjusted padding to reduce body size */
+    padding-bottom: 20px; /* Adjusted padding to reduce body size */
     margin: 0;
     overflow-x: hidden;
 }
@@ -62,31 +63,35 @@ nav {
 
 /* Form Styling */
 .form-container {
-    max-width: 600px;
-    margin: 0 auto;
-    background-color: #ce2222;
-    padding: 30px;
+    background-color: #fff;
+    padding: 200px; /* Decrease padding to reduce height */
     border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    border: 2px solid #000;
 }
 
 .form-container h2 {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 20px; /* Adjust margin bottom for spacing */
+    font-size: 24px; /* Increase font size for header if necessary */
 }
 
 .form-group {
-    margin-bottom: 10px;
+    margin-bottom: 15px; /* Decrease margin bottom for tighter spacing */
 }
 
 .form-group label {
     font-weight: bold;
+    font-size: 16px; /* Adjust font size for labels */
 }
 
 .form-control {
     width: 100%;
-    padding: 5px;
-    font-size: 16px;
+    padding: 8px; /* Adjust padding for input fields */
+    font-size: 14px; /* Adjust font size for input fields */
     border: 1px solid #ccc;
     border-radius: 5px;
 }
@@ -100,19 +105,16 @@ nav {
     border-radius: 25px;
     font-weight: bold;
     border: 2px solid black;
+    width: 100%;
+    font-size: 16px; /* Adjust font size for button */
 }
 
 .btn-submit:hover {
     background-color: #000000;
     color: #FF7D29;
+    border-color: #FF7D29;
 }
 
-/* Responsive adjustments for smaller screens */
-@media (max-width: 768px) {
-    .form-container {
-        padding: 20px;
-    }
-}
 /* Updated Footer Styling */
 .footer {
     background-color: #343a40;
@@ -120,6 +122,7 @@ nav {
     padding-top: 30px;
     padding-bottom: 30px;
     font-size: 14px;
+    margin-bottom: -100px;
 }
 
 .footer h5 {
@@ -154,7 +157,7 @@ nav {
 }
 
 .footer form .btn-primary:hover {
-    background-color: #ffffff;
+    background-color: #000000;
     color: #ff7d29;
     border-color: #ff7d29;
 }
@@ -201,4 +204,324 @@ nav {
 
 .footer .text-center {
     text-align: center;
+}
+
+.appointment-section {
+    display: flex;
+    justify-content: space-around; /* Adjust spacing between sections */
+    align-items: flex-start; /* Align items to the top */
+    gap: 20px; /* Add gap between sections */
+    padding: 20px; /* Add padding for better spacing */
+}
+
+.calendar-and-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+
+.calendar-section {
+    
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.fc {
+    max-width: 100%;
+    height: auto;
+}
+
+.fc .fc-toolbar.fc-header-toolbar {
+    flex-wrap: wrap;
+}
+
+.fc .fc-daygrid-day-top {
+    display: flex;
+    justify-content: center;
+}
+
+.fc .fc-daygrid-day-frame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fc .fc-daygrid-day-number {
+    margin-bottom: 5px;
+}
+.selected-date-section {
+    background-color: #fff;
+    padding: 10px; /* Adjust padding for more compact section */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#calendar {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+#selectedDate {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .appointment-section {
+        flex-direction: column; /* Stack sections vertically on smaller screens */
+        gap: 20px; /* Add gap between sections */
+    }
+
+    .calendar-and-selected-date {
+        max-width: none; /* Remove max-width for full width on smaller screens */
+    }
+}
+
+.quote-section {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-left: 5px solid #A0DEFF;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%; /* Ensure height matches appointment section */
+    max-width: 400px; /* Control max-width for better alignment */
+    width: 100%;
+    margin-top: 20px; /* Add margin-top for spacing */
+}
+
+blockquote {
+    margin: 0; /* Reset default margin */
+}
+
+/* Login Inside Button Styling */
+.btn-login-inside {
+    background-color: #FF7D29;
+    border: none;
+    color: #000000;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid black;
+}
+
+.btn-login-inside:hover {
+    background-color: #000000;
+    color: #FF7D29;
+    border-radius: 25px;
+    border: 2px solid black;
+}
+
+/* Login Button Styling */
+.btn-login {
+    background-color: #ffffff;
+    border: none;
+    color: #000000;
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid black;
+}
+
+.btn-login:hover {
+    background-color: #000000;
+    color: #FF7D29;
+    border-color: white;
+}
+
+/* Adjust social media icon sizes */
+.social-icon {
+    width: 30px; /* Set the desired width */
+    height: 30px; /* Set the desired height */
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1); /* Slightly enlarge the icon on hover */
+}
+
+/* Appointment Section */
+#appointment {
+    background-color: #A0DEFF;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: -50px;
+}
+
+.form-container {
+    background-color: #fff;
+    padding: 10px; /* Decrease padding to reduce height */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.calendar-section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#calendar {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.selected-date-section {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+#selectedDate {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+/* Quote Section */
+.quote-section {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-left: 5px solid #A0DEFF;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    max-width: 400px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+blockquote {
+    margin: 0;
+}
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .form-container {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    .form-group label {
+        font-size: 14px; /* Adjust font size for labels on smaller screens */
+    }
+
+    .form-control {
+        padding: 6px; /* Adjust padding for input fields on smaller screens */
+        font-size: 12px; /* Adjust font size for input fields on smaller screens */
+    }
+}
+.btn-calendar {
+    position: fixed;
+    top: 20px; /* Adjust top position as needed */
+    right: 20px; /* Adjust right position as needed */
+    background-color: #FF7D29;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid black;
+    z-index: 1000; /* Ensure the button is above other elements */
+}
+
+.btn-calendar:hover {
+    background-color: #000000;
+    color: #FF7D29;
+}
+/* Existing styles... */
+
+.fc-toolbar-title {
+    display: block;
+    width: 500px;
+    text-align: center;
+    font-size: 1.5rem; /* Adjust as needed */
+    margin: 0;
+    padding: 0.5rem 0; /* Adjust padding as needed */
+}
+
+.fc-toolbar-chunk {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+
+
+.fc .fc-toolbar-title {
+    font-size: 1.10em;
+    margin-left: 0%;
+}
+/* Updated Dropdown Menu Styling */
+.navbar .dropdown-menu {
+    background-color: #FF7D29; /* Background color */
+    border: 2px solid #000000; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Box shadow */
+}
+
+.navbar .dropdown-menu a {
+    color: #ffffff; /* Text color */
+    font-weight: bold;
+}
+
+.navbar .dropdown-menu a:hover,
+.navbar .dropdown-menu .dropdown-item:focus {
+    background-color: #000000; /* Hover background color */
+    color: #FF7D29; /* Hover text color */
+}
+
+.navbar .dropdown-menu .dropdown-item {
+    padding: 10px 20px; /* Padding */
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+.navbar .dropdown-menu .dropdown-divider {
+    margin: 5px 0; /* Margin for divider */
+    border-color: #ffffff; /* Divider color */
+}
+
+.dropdown-menu .dropdown-item-text {
+    color: #ffffff; /* Text color for additional text */
+    font-size: 14px; /* Font size */
+    padding-left: 20px; /* Left padding */
+}
+
+.dropdown-menu .dropdown-item-text small {
+    color: #dddddd; /* Small text color */
+}
+
+/* Right-aligned dropdown */
+.dropdown-menu-right {
+    right: 0;
+    left: auto;
+}
+
+/* Left-aligned dropdown */
+.dropdown-menu-left {
+    left: 0;
+    right: auto;
 }
