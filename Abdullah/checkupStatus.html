@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Status</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="checkup.css">
+    <link rel="stylesheet" href="appointmentStatus.css">
+    <link rel="stylesheet" href="loading.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top custom-navbar">
+        <a class="navbar-brand" href="index.html">DeshCare Vaccine</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="/Shamik/existing_campaigns.html">Campaign</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownVaccine" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Vaccine</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownVaccine">
+                        <a class="dropdown-item" href="#">Available vaccine</a>
+                        <a class="dropdown-item" href="#">Vaccine Center</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAppointment" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Appointment</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownAppointment">
+                        <a class="dropdown-item" href="checkup.html">Book an appointment</a>
+                        <a class="dropdown-item" href="checkupStatus.html">Appointment Status</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAbout" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownAbout">
+                        <a class="dropdown-item" href="#about">About Us</a>
+                        <a class="dropdown-item" href="#doctor">Our Doctor</a>
+                    </div>
+                </li>
+            </ul>
+            <a class="btn btn-primary btn-login" href="#">Login</a>
+        </div>
+    </nav>
+
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="spinner"></div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('a').forEach(function(anchor) {
+                anchor.addEventListener('click', function(event) {
+                    if (this.getAttribute('href') && this.getAttribute('href') !== '#') {
+                        event.preventDefault();
+                        document.getElementById('loadingScreen').style.display = 'flex';
+                        setTimeout(() => {
+                            window.location.href = this.getAttribute('href');
+                        }, 1000);
+                    }
+                });
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('loadingScreen').style.display = 'none';
+        });
+    </script>
+
+    <!-- Main Content: Appointment Status -->
+    <section id="appointmentStatus" class="container py-5">
+        <div class="appointment-status-box mx-auto">
+            <h2 class="text-center">Appointment Status</h2>
+            <div class="appointment-info">
+                <h3>Previous Appointment:</h3>
+                <p id="previousAppointment">No previous appointment taken.</p>
+            </div>
+            <div class="appointment-info">
+                <h3>Current Appointment:</h3>
+                <p id="currentAppointmentDate">Selected Date: June 15, 2024</p>
+                <p id="appointmentLocation">Location: ABC Health Center</p>
+                <p id="appointmentCenterLocation">Center Location: 123 Main Street, City</p>
+                <p id="appointmentSlot">Slot No: 12</p>
+                <p id="appointmentTime">Time: 10:30 AM</p>
+            </div>
+            <div class="appointment-actions">
+                <button id="cancelAppointment" class="btn btn-danger">Cancel Appointment</button>
+                <button id="updateAppointment" class="btn btn-warning">Request Update</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overlay for Update Request -->
+    <div id="updateOverlay" class="overlay">
+        <div class="overlay-content">
+            <h3>Update Appointment</h3>
+            <form>
+                <div class="form-group">
+                    <label for="newAppointmentDate">New Date</label>
+                    <input type="date" class="form-control" id="newAppointmentDate">
+                </div>
+                <div class="form-group">
+                    <label for="appointmentLocation">Appointment Center</label>
+                    <select class="form-control" id="appointmentLocation" name="appointmentLocation" required>
+                        <option value="">Select Appointment Location</option>
+                        <option value="Location1">Abc Center</option>
+                        <option value="Location2">Kurmitola Center</option>
+                    </select>
+                </div>
+                <div class="overlay-buttons">
+                    <button type="submit" class="btn btn-primary btn-overlay">Submit</button>
+                    <button type="button" class="btn btn-secondary btn-overlay" id="closeOverlay">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Overlay for Cancel Appointment Confirmation -->
+    <div id="cancelOverlay" class="overlay">
+        <div class="overlay-content">
+            <h3>Are you sure you want to cancel the appointment?</h3>
+            <div class="overlay-buttons">
+                <button type="button" class="btn btn-primary btn-overlay" id="confirmCancel">Yes</button>
+                <button type="button" class="btn btn-secondary btn-overlay" id="closeCancelOverlay">No</button>
+            </div>
+        </div>
+    </div>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="spinner"></div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('a').forEach(function(anchor) {
+                anchor.addEventListener('click', function(event) {
+                    if (this.getAttribute('href') && this.getAttribute('href') !== '#') {
+                        event.preventDefault();
+                        document.getElementById('loadingScreen').style.display = 'flex';
+                        setTimeout(() => {
+                            window.location.href = this.getAttribute('href');
+                        }, 1000);
+                    }
+                });
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('loadingScreen').style.display = 'none';
+        });
+    </script>
+
+     <!-- loading sceen 2nd page starts -->
+     <div class="loading-screen" id="loadingScreen">
+        <div class="spinner"></div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Hide loading screen after the page loads
+            document.getElementById('loadingScreen').style.display = 'none';
+        });
+    </script>
+    <!-- loading sceen 2nd page end -->
+    <!-- Footer -->
+    <footer class="footer bg-dark text-light py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h5>Contact Information</h5>
+                    <address>
+                        123 Main Street, City<br>
+                        Email: info@deshcarevaccine.com<br>
+                        Phone: +1234567890
+                    </address>
+                </div>
+                <div class="col-md-2">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Vaccine Information</a></li>
+                        <li><a href="#">Appointment Booking</a></li>
+                        <li><a href="#">Campaigns</a></li>
+                        <li><a href="#">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h5>Privacy & Terms</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h5>Connect with Us</h5>
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><a href="#"><img src="Images/facebook.png" alt="Facebook" class="social-icon"></a></li>
+                        <li class="list-inline-item"><a href="#"><img src="Images/twitter.png" alt="Twitter" class="social-icon"></a></li>
+                        <li class="list-inline-item"><a href="#"><img src="Images/instagram.png" alt="Instagram" class="social-icon"></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Newsletter Signup</h5>
+                    <form>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Enter your email">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('updateAppointment').addEventListener('click', function() {
+                document.getElementById('updateOverlay').style.display = 'flex';
+            });
+            document.getElementById('closeOverlay').addEventListener('click', function() {
+                document.getElementById('updateOverlay').style.display = 'none';
+            });
+            document.getElementById('cancelAppointment').addEventListener('click', function() {
+                document.getElementById('cancelOverlay').style.display = 'flex';
+            });
+            document.getElementById('closeCancelOverlay').addEventListener('click', function() {
+                document.getElementById('cancelOverlay').style.display = 'none';
+            });
+        });
+    </script>
+</body>
+</html>
