@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="AdminDashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Top Navbar -->
+    <nav class="top-navbar">
+        <div class="navbar-left">
+            <span class="togglebtn" onclick="toggleNav()">&#9776;</span>
+            DeshCare Vaccine
+        </div>
+        <div class="navbar-center">Admin Dashboard</div>
+        <div class="navbar-right">
+            <div class="dropdown">
+                <button class="dropbtn">Admin</button>
+                <div class="dropdown-content">
+                    <a href="#">Profile</a>
+                    <a href="#">Settings</a>
+                    <a href="#">Log out</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Sidebar -->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="toggleNav()">&times;</a>
+        <a href="#" onclick="showInfo('appointment')"><i class="fas fa-calendar-check"></i> <span>Appointment Info.</span></a>
+        <a href="#" onclick="showInfo('campaign')"><i class="fas fa-bullhorn"></i> <span>Campaign Info</span></a>
+        <a href="#" onclick="showInfo('vaccineCenter')"><i class="fas fa-hospital"></i> <span>Vaccine Center Info.</span></a>
+        <a href="#" onclick="showInfo('vaccine')"><i class="fas fa-syringe"></i> <span>Vaccine Info.</span></a>
+        <a href="#" onclick="showInfo('patient')"><i class="fas fa-user"></i> <span>Patient's Info.</span></a>
+        <a href="#" onclick="showInfo('doctor')"><i class="fas fa-user-md"></i> <span>Doctor Info.</span></a>
+        <a href="#" onclick="showInfo('notice')"><i class="fas fa-bell"></i> <span>Notice</span></a>
+    </div>
+
+
+    <!-- Main Content -->
+    <div class="main-content" id="main-content">
+        <div class="container">
+            <h1>Welcome to the Admin Dashboard</h1>
+            <p>Select an option from the menu to view more information.</p>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <p class="text-center">© 2024 Admin Dashboard. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+    <script>
+        function showInfo(infoType) {
+            alert(infoType + " information will be displayed here.");
+        }
+
+
+        function toggleNav() {
+            var sidenav = document.getElementById("mySidenav");
+
+
+            if (sidenav.classList.contains("sidenav-minimized")) {
+                sidenav.classList.remove("sidenav-minimized");
+            } else {
+                sidenav.classList.add("sidenav-minimized");
+            }
+        }
+    </script>
+</body>
+</html>
