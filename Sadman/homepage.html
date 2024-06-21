@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DeshCare</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="footer.css">
     <style>
         nav {
             background-color: #ea580c;
@@ -36,7 +38,7 @@
             <!-- User Icon -->
             <div class="flex items-center">
                 <div class="w-8 h-8 bg-gray-600 rounded-full flex items-center justify-center text-white">
-                    <span class="font-bold">U</span>
+                    <a href="profile.html" class="text-gray-300 hover:text-white px-3 py-2 rounded-full">U</a>
                 </div>
             </div>
         </div>
@@ -72,5 +74,61 @@
             </div>
         </div>
     </section>
+    <footer class="footer bg-dark text-light py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h5>Contact Information</h5>
+                    <address>
+                        123 Main Street, City<br>
+                        Email: info@deshcarevaccine.com<br>
+                        Phone: +1234567890
+                    </address>
+                </div>
+                <div class="col-md-2">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Vaccine Information</a></li>
+                        <li><a href="#">Appointment Booking</a></li>
+                        <li><a href="#">Campaigns</a></li>
+                        <li><a href="#">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h5>Privacy & Terms</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h5>Connect with Us</h5>
+                    <ul class="list-inline">
+                        <li class="list-inline-item"><a href="#"><img src="Images/facebook.png" alt="Facebook" class="social-icon"></a></li>
+                        <li class="list-inline-item"><a href="#"><img src="Images/twitter.png" alt="Twitter" class="social-icon"></a></li>
+                        <li class="list-inline-item"><a href="#"><img src="Images/instagram.png" alt="Instagram" class="social-icon"></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Newsletter Signup</h5>
+                    <form class="form-inline">
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" placeholder="Enter your email">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="button">Subscribe</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p>&copy; 2024 DeshCare Vaccine. All rights reserved.</p>
+                    <p>ISO 9001:2015 Certified</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
