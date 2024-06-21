@@ -1,0 +1,142 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #A0DEFF;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.notice-container {
+    width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    background-color: #f07109;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.new-notice-button {
+    padding: 12px 24px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.new-notice-button:hover {
+    background-color: #218838;
+}
+
+.notice-form {
+    margin-bottom: 40px;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.notice-form h2 {
+    margin-bottom: 20px;
+    color: #f07109;
+    font-size: 22px;
+}
+
+.notice-form form {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 15px;
+}
+
+.notice-form label {
+    align-self: center;
+    font-size: 16px;
+    color: #333;
+}
+
+.notice-form input,
+.notice-form textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: white;
+    color: black;
+}
+
+.notice-form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.notice-form button {
+    grid-column: 2 / 3;
+    padding: 12px 24px;
+    background-color: #f07109;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.notice-form button:hover {
+    background-color: #d65d07;
+}
+
+.notice-list h2 {
+    margin-bottom: 20px;
+    color: #f07109;
+    font-size: 22px;
+}
+
+.notice-card {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.notice-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.notice-card h3 {
+    margin-top: 0;
+    color: #f07109;
+    font-size: 20px;
+}
+
+.notice-card p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.notice-date {
+    font-size: 14px;
+    color: #666;
+}
