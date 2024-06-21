@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Vaccine Center Info</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="centrestyle.css" rel="stylesheet">
+</head>
+<body>
+    <header class="text-white text-center py-3">
+        <h1>Admin - Vaccine Center Information</h1>
+    </header>
+
+    <nav class="navbar navbar-expand-md navbar-dark">
+        <a class="navbar-brand" href="#">Admin Panel</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#">Dashboard</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Vaccine Centers</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Appointments</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Edit Vaccine Center Information</h2>
+        <form>
+            <div class="form-group row">
+                <label for="centerName" class="col-sm-2 col-form-label">Center Name</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="centerName" placeholder="Enter center name">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="centerAddress" class="col-sm-2 col-form-label">Center Address</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="centerAddress" placeholder="Enter center address">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="vaccineAvailability" class="col-sm-2 col-form-label">Vaccine Availability</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="vaccineAvailability" placeholder="Enter vaccine availability">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="contactInfo" class="col-sm-2 col-form-label">Contact Info</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="contactInfo" placeholder="Enter contact info">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="otherInfo" class="col-sm-2 col-form-label">Other Info</label>
+                <div class="col-sm-10">
+                    <textarea class="form-control" id="otherInfo" rows="5" placeholder="Enter any other necessary information"></textarea>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-10 offset-sm-2">
+                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p>&copy; 2024 Elderly Vaccination Program. All rights reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
