@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="checkup.css"> <!-- Ensure this links your existing CSS file -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/main.min.css" />
+    <link rel="stylesheet" href="/Abdullah/loading.css">
 </head>
 <body>
 
@@ -24,15 +25,15 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownVaccine" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Vaccine</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownVaccine">
-                        <a class="dropdown-item" href="#">Item 1</a>
-                        <a class="dropdown-item" href="#">Item 2</a>
+                        <a class="dropdown-item" href="#">Available vaccine</a>
+                        <a class="dropdown-item" href="#">Vaccine Center</a>
                     </div>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownAppointment" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Appointment</a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownAppointment">
                         <a class="dropdown-item" href="checkup.html">Book an appointment</a>
-                        <a class="dropdown-item" href="#">Appointment Status</a>
+                        <a class="dropdown-item" href="checkupStatus.html">Appointment Status</a>
                     </div>
                 </li>
                 <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
@@ -55,7 +56,7 @@
             <div class="calendar-and-form">
                 <div class="selected-date-section">
                     <h3>Selected Appointment Date</h3>
-                    <p id="selectedDate">June 15, 2024</p>
+                    <p id="selectedDate">Select you desire Date</p>
                 </div>
                 <div class="calendar-section">
                     <div id="calendar"></div>
@@ -75,6 +76,14 @@
                     <div class="form-group">
                         <label for="phone">Phone Number</label>
                         <input type="tel" class="form-control" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="appointmentLocation">Appointment Center</label>
+                        <select class="form-control" id="appointmentLocation" name="appointmentLocation" required>
+                            <option value="">Select Appointment Location</option>
+                            <option value="Location1">Abc Center</option>
+                            <option value="Location2">Kurmitola Center</option>
+                        </select>
                     </div>
                     <div class="form-group">
                         <label for="appointmentType">Appointment Type</label>
@@ -178,5 +187,40 @@
             calendar.render();
         });
     </script>
+       <!-- loading sceen copy 1st page STARTS -->
+<div class="loading-screen" id="loadingScreen">
+    <div class="spinner"></div>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('a').forEach(function(anchor) {
+            anchor.addEventListener('click', function(event) {
+                if (this.getAttribute('href') && this.getAttribute('href') !== '#') {
+                    event.preventDefault();
+                    // Show loading screen
+                    document.getElementById('loadingScreen').style.display = 'flex';
+                    // Navigate to the new page after a short delay
+                    setTimeout(() => {
+                        window.location.href = this.getAttribute('href');
+                    }, 1000); // Adjust the delay as needed
+                }
+            });
+        });
+    });
+</script>
+<!-- loading sceen copy 1st page ENDS-->
+
+    <!-- loading sceen 2nd page starts -->
+      <div class="loading-screen" id="loadingScreen">
+        <div class="spinner"></div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Hide loading screen after the page loads
+            document.getElementById('loadingScreen').style.display = 'none';
+        });
+    </script>
+    <!-- loading sceen 2nd page end -->
+
 </body>
 </html>
