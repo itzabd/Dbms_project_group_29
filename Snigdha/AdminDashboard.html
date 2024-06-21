@@ -27,7 +27,6 @@
         </div>
     </nav>
 
-
     <!-- Sidebar -->
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="toggleNav()">&times;</a>
@@ -40,7 +39,6 @@
         <a href="#" onclick="showInfo('notice')"><i class="fas fa-bell"></i> <span>Notice</span></a>
     </div>
 
-
     <!-- Main Content -->
     <div class="main-content" id="main-content">
         <div class="container">
@@ -49,25 +47,67 @@
         </div>
     </div>
 
-
     <!-- Footer -->
-    <footer class="footer" id="footer">
-        <div class="container">
-            <p class="text-center">© 2024 Admin Dashboard. All rights reserved.</p>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-column">
+                <h5>Contact Information</h5>
+                <address>
+                    123 Main Street, City<br>
+                    Email: info@deshcarevaccine.com<br>
+                    Phone: +1234567890
+                </address>
+            </div>
+            <div class="footer-column">
+                <h5>Quick Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#">Vaccine Information</a></li>
+                    <li><a href="#">Appointment Booking</a></li>
+                    <li><a href="#">Campaigns</a></li>
+                    <li><a href="#">About Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h5>Privacy & Terms</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h5>Connect with Us</h5>
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="#"><img src="/Abdullah/Images/facebook.png" alt="Facebook" class="social-icon"></a></li>
+                    <li class="list-inline-item"><a href="#"><img src="/Abdullah/Images/twitter.png" alt="Twitter" class="social-icon"></a></li>
+                    <li class="list-inline-item"><a href="#"><img src="/Abdullah/Images/instagram.png" alt="Instagram" class="social-icon"></a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h5>Newsletter Signup</h5>
+                <form class="form-inline">
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control" placeholder="Enter your email">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary" type="button">Subscribe</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <hr class="my-4">
+        <div class="footer-bottom">
+            <p>&copy; 2024 DeshCare Vaccine. All rights reserved.</p>
+            <p>ISO 9001:2015 Certified</p>
         </div>
     </footer>
-
 
     <script>
         function showInfo(infoType) {
             alert(infoType + " information will be displayed here.");
         }
 
-
         function toggleNav() {
             var sidenav = document.getElementById("mySidenav");
-
-
             if (sidenav.classList.contains("sidenav-minimized")) {
                 sidenav.classList.remove("sidenav-minimized");
             } else {

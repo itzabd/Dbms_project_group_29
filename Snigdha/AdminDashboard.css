@@ -8,7 +8,6 @@ body {
     min-height: 100vh;
 }
 
-
 /* Top Navbar Styling */
 .top-navbar {
     width: 100%;
@@ -25,14 +24,12 @@ body {
     border-bottom: 2px black solid;
 }
 
-
 .navbar-left {
     font-weight: bold;
     font-size: 24px;
     display: flex;
     align-items: center;
 }
-
 
 .navbar-center {
     flex: 1;
@@ -41,12 +38,10 @@ body {
     font-size: 24px;
 }
 
-
 .navbar-right {
     display: flex;
     align-items: center;
 }
-
 
 .dropbtn {
     background-color: #ffffff;
@@ -61,13 +56,11 @@ body {
     border-radius: 25px;
 }
 
-
 .dropdown {
     position: relative;
     display: inline-block;
     padding: 0.5rem 3.5rem;
 }
-
 
 .dropdown-content {
     display: none;
@@ -79,7 +72,6 @@ body {
     right: 0;
 }
 
-
 .dropdown-content a {
     color: black;
     padding: 12px 16px;
@@ -87,23 +79,19 @@ body {
     display: block;
 }
 
-
 .dropdown-content a:hover {
     background-color: #000000;
     color: #FF7D29;
 }
 
-
 .dropdown:hover .dropdown-content {
     display: block;
 }
-
 
 .dropdown:hover .dropbtn {
     background-color: #000000;
     color: #FF7D29;
 }
-
 
 /* Sidebar Styling */
 .sidenav {
@@ -121,7 +109,6 @@ body {
     flex-direction: column;
 }
 
-
 .sidenav a {
     padding: 8px 16px;
     text-decoration: none;
@@ -132,18 +119,15 @@ body {
     transition: 0.3s;
 }
 
-
 .sidenav a:hover {
     color: #f1f1f1;
 }
-
 
 .sidenav a i {
     margin-right: 10px;
     min-width: 25px; /* To keep icons aligned */
     text-align: center;
 }
-
 
 .sidenav a span {
     display: inline-block;
@@ -153,16 +137,13 @@ body {
     max-width: calc(100% - 35px); /* Adjust based on icon width and padding */
 }
 
-
 .sidenav.sidenav-minimized {
     width: 50px;
 }
 
-
 .sidenav.sidenav-minimized a span {
     display: none;
 }
-
 
 .togglebtn {
     font-size: 30px;
@@ -174,7 +155,6 @@ body {
     outline: none;
 }
 
-
 /* Main Content Styling */
 .main-content {
     margin-left: 250px;
@@ -184,29 +164,24 @@ body {
     transition: margin-left 0.5s;
 }
 
-
 .sidenav.sidenav-minimized ~ .main-content {
     margin-left: 80px;
 }
-
 
 .container {
     margin-top: 20px;
     text-align: center;
 }
 
-
 h1 {
     font-size: 36px;
     color: #000;
 }
 
-
 p {
     font-size: 18px;
     color: #333;
 }
-
 
 /* Footer Styling */
 .footer {
@@ -214,20 +189,127 @@ p {
     color: #ffffff;
     padding-top: 30px;
     padding-bottom: 30px;
+    padding-left: 30px;
     font-size: 14px;
-    text-align: center;
-    width: 100%;
-    position: relative;
+    margin-top: auto;
+    margin-left: 250px; /* Adjusted to counteract main content margin */
     transition: margin-left 0.5s;
+    position: relative; /* Ensure relative positioning for child elements */
 }
-
-
-.footer p {
-    margin-bottom: 0;
-    color: white;
-}
-
 
 .sidenav.sidenav-minimized ~ .footer {
-    margin-left: 50px;
+    margin-left: 50px; /* Adjusted margin when sidebar is minimized */
+}
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1140px;
+    margin: 0 auto;
+    transition: margin-left 0.5s; /* Smooth transition for content inside footer */
+    position: relative; /* Ensure relative positioning for child elements */
+}
+.sidenav.sidenav-minimized ~ .footer .footer-container {
+    margin-left: 0; /* Adjusted margin when sidebar is minimized */
+}
+
+.footer-column {
+    flex: 1 1 20%;
+    margin-bottom: 20px;
+}
+
+.footer h5 {
+    font-size: 18px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.footer ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+.footer ul li {
+    margin-bottom: 10px;
+}
+
+.footer ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer ul li a:hover {
+    color: #ff7d29;
+    text-decoration: none;
+}
+
+.footer form .btn-primary {
+    background-color: #ff7d29;
+    border-color: #ff7d29;
+}
+
+.footer form .btn-primary:hover {
+    background-color: #ffffff;
+    color: #ff7d29;
+    border-color: #ff7d29;
+}
+
+.footer address {
+    margin-bottom: 20px;
+    font-style: normal;
+}
+
+.footer .list-inline {
+    display: flex;
+    justify-content: left; /* Center align items horizontally */
+    margin-bottom: 20px;
+}
+
+.footer .list-inline-item {
+    margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+    .footer .list-inline {
+        flex-direction: column; /* Stack icons vertically on smaller screens */
+        align-items: center; /* Center align items vertically */
+    }
+
+    .footer .list-inline-item {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+
+.footer hr {
+    border-top: 1px solid #ffffff;
+    margin: 1.5rem 0;
+    margin-left: -100px;
+}
+
+.footer .text-md-right {
+    text-align: center;
+}
+
+.footer p {
+    text-align: center;
+    margin-bottom: 0;
+    color: #fff;
+}
+
+.footer .text-center {
+    text-align: center;
+}
+
+/* Adjust social media icon sizes */
+.social-icon {
+    width: 30px; /* Set the desired width */
+    height: 30px; /* Set the desired height */
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1); /* Slightly enlarge the icon on hover */
 }
