@@ -114,7 +114,10 @@
     color: #FF7D29;
     border-color: #FF7D29;
 }
+.footer {
+    margin-bottom: -100px;
 
+}
 
 /* <div class="form-group">
                     <label for="appointmentLocation">Appointment Center</label>
