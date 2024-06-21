@@ -1,0 +1,92 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #A0DEFF;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.registration-container {
+    width: 60%;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f07109;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 12px 12px 0 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.registration-form {
+    padding: 20px;
+}
+
+.registration-form label {
+    display: block;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+.registration-form input,
+.registration-form textarea {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    background-color: white;
+    color: black;
+}
+
+.registration-form textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.radio-group {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 5px;
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 5px;
+}
+
+.hidden {
+    display: none;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 12px 0;
+    margin-top: 20px;
+    background-color: #f07109;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #d65d07;
+}

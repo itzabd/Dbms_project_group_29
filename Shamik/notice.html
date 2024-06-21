@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notice Board</title>
+    <link rel="stylesheet" href="notice.css">
+</head>
+<body>
+    <div class="notice-container">
+        <header>
+            <h1>Notice Board</h1>
+            <button class="new-notice-button">+ Publish New Notice</button>
+        </header>
+
+        <section class="notice-form">
+            <h2>Publish New Notice</h2>
+            <form>
+                <label for="notice-title">Notice Title:</label>
+                <input type="text" id="notice-title" name="notice-title" required>
+
+                <label for="notice-description">Description:</label>
+                <textarea id="notice-description" name="notice-description" required></textarea>
+
+                <button type="submit">Publish Notice</button>
+            </form>
+        </section>
+
+        <section class="notice-list">
+            <h2>Existing Notices</h2>
+            <div class="notice-card">
+                <h3>Notice Title 1</h3>
+                <p>Sample description for notice 1.</p>
+                <p class="notice-date">Published on: 2023-06-01</p>
+            </div>
+            <div class="notice-card">
+                <h3>Notice Title 2</h3>
+                <p>Sample description for notice 2.</p>
+                <p class="notice-date">Published on: 2023-07-01</p>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
