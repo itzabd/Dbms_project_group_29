@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="AdminDashboard.css">
+</head>
+<body>
+    <!-- Top Navbar -->
+    <nav class="top-navbar">
+        <div class="navbar-left">DeshCare Vaccine</div>
+        <div class="navbar-center">Admin Dashboard</div>
+        <div class="navbar-right">
+            <div class="dropdown">
+                <button class="dropbtn">Admin</button>
+                <div class="dropdown-content">
+                    <a href="#">Profile</a>
+                    <a href="#">Settings</a>
+                    <a href="#">Log out</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <ul class="sidebar-nav">
+            <li><a href="#" onclick="showInfo('appointment')">Appointment Info</a></li>
+            <li><a href="#" onclick="showInfo('campaign')">Campaign Info</a></li>
+            <li><a href="#" onclick="showInfo('vaccineCenter')">Vaccine Center Info</a></li>
+            <li><a href="#" onclick="showInfo('vaccine')">Vaccine Info</a></li>
+            <li><a href="#" onclick="showInfo('patient')">Patient Info</a></li>
+            <li><a href="#" onclick="showInfo('doctor')">Doctor Info</a></li>
+            <li><a href="#" onclick="showInfo('notice')">Notice</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="container">
+            <h1>Welcome to the Admin Dashboard</h1>
+            <p>Select an option from the menu to view more information.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="text-center">© 2024 Admin Dashboard. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function showInfo(infoType) {
+            alert(infoType + " information will be displayed here.");
+        }
+    </script>
+</body>
+</html>
