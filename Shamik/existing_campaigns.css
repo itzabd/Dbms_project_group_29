@@ -183,12 +183,14 @@ nav {
     width: 90%;
     margin: 40px auto;
     padding: 20px;
-    background-color: white;
+    background-color: #eaeef0ec;
     border-radius: 15px;
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    border: 1px black solid;
 }
 
 header {
+    
     display: flex;
     justify-content: center;
     align-items: center;

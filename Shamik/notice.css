@@ -17,7 +17,7 @@ body {
 
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     margin-bottom: 30px;
     background-color: #f07109;
@@ -25,11 +25,13 @@ header {
     padding: 15px 30px;
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    
 }
 
 header h1 {
     margin: 0;
     font-size: 24px;
+   
 }
 
 .new-notice-button {

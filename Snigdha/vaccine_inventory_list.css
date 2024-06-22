@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #A0DEFF;
+}
+
+.header-custom {
+    background-color: #f07109;
+    color: white;
+    padding: 10px 0;
+    border-radius: 15px;
+    margin: 20px auto;
+    width: 80%;
+}
+
+.navbar {
+    background-color: #f07109;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+}
+
+.navbar-nav .nav-link {
+    color: white !important;
+}
+
+.container {
+    max-width: 800px;
+}
+
+.form-control {
+    background-color: white;
+}
+
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 10px 0;
+}
+
+.btn-primary {
+    background-color: #f07109;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #d86105;
+}
+
+.table-custom {
+    background-color: white;
+    border: 2px solid black;
+}
+
+.table-custom th,
+.table-custom td {
+    border: 1px solid black;
+}
+
+.table thead {
+    background-color: #343a40;
+    color: white;
+}

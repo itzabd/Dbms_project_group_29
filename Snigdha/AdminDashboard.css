@@ -6,6 +6,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    
 }
 
 /* Top Navbar Styling */
@@ -59,7 +60,7 @@ body {
 .dropdown {
     position: relative;
     display: inline-block;
-    padding: 0.5rem 3.5rem;
+    padding: 0.5rem 3rem;
 }
 
 .dropdown-content {
@@ -109,7 +110,7 @@ body {
     flex-direction: column;
 }
 
-.sidenav a {
+.sidenav a, .accordion {
     padding: 8px 16px;
     text-decoration: none;
     font-size: 18px;
@@ -117,19 +118,23 @@ body {
     display: flex;
     align-items: center;
     transition: 0.3s;
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
 }
 
-.sidenav a:hover {
+.sidenav a:hover, .accordion:hover {
     color: #f1f1f1;
 }
 
-.sidenav a i {
+.sidenav a i, .accordion i {
     margin-right: 10px;
     min-width: 25px; /* To keep icons aligned */
     text-align: center;
 }
 
-.sidenav a span {
+.sidenav a span, .accordion span {
     display: inline-block;
     white-space: nowrap;
     overflow: hidden;
@@ -141,7 +146,7 @@ body {
     width: 50px;
 }
 
-.sidenav.sidenav-minimized a span {
+.sidenav.sidenav-minimized a span, .sidenav.sidenav-minimized .accordion span {
     display: none;
 }
 
@@ -155,13 +160,28 @@ body {
     outline: none;
 }
 
+/* Accordion Panel Styling */
+.panel {
+    padding-left: 30px;
+    display: none;
+    background-color: #FF7D29; /* Lighter shade of the sidebar color */
+}
+
+.panel a {
+    font-size: 16px;
+    padding: 8px 16px;
+}
+
+
 /* Main Content Styling */
 .main-content {
+    background-color: #A0DEFF;
     margin-left: 250px;
     padding: 20px;
     flex-grow: 1;
     margin-top: 100px; /* Adjusted to accommodate the top navbar */
     transition: margin-left 0.5s;
+    min-height: 420px;
 }
 
 .sidenav.sidenav-minimized ~ .main-content {
@@ -281,7 +301,6 @@ p {
         margin-bottom: 10px;
     }
 }
-
 
 .footer hr {
     border-top: 1px solid #ffffff;

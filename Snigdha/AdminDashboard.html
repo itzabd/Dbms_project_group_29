@@ -1,13 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
     <link rel="stylesheet" href="AdminDashboard.css">
     <link rel="stylesheet" href="/Shamik/styles.css">
+    <link rel="stylesheet" href="/Sabrina/centreshowstyle.css">
+    <link rel="stylesheet" href="/Shamik/existing_campaigns.css">
+    <link rel="stylesheet" href="/Shamik/notice.css">
+    <link rel="stylesheet" href="/Sabrina/centreshowstyle.css">
+    <link rel="stylesheet" href="vaccine_inventory_list.css">
+    <link rel="stylesheet" href="/Abdullah/patient_info.css">
+    <link rel="stylesheet" href="/Abdullah/patient_vaccine.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
     <!-- Top Navbar -->
     <nav class="top-navbar">
@@ -31,13 +40,43 @@
     <!-- Sidebar -->
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="toggleNav()">&times;</a>
-        <a href="#" onclick="showInfo('appointment')"><i class="fas fa-calendar-check"></i> <span>Appointment Info.</span></a>
-        <a href="#" onclick="loadContent('/Shamik/campaign.html')"><i class="fas fa-bullhorn"></i> <span>Campaign Info</span></a>
-        <a href="#" onclick="showInfo('vaccineCenter')"><i class="fas fa-hospital"></i> <span>Vaccine Center Info.</span></a>
-        <a href="#" onclick="showInfo('vaccine')"><i class="fas fa-syringe"></i> <span>Vaccine Info.</span></a>
-        <a href="#" onclick="showInfo('patient')"><i class="fas fa-user"></i> <span>Patient's Info.</span></a>
-        <a href="#" onclick="showInfo('doctor')"><i class="fas fa-user-md"></i> <span>Doctor Info.</span></a>
-        <a href="#" onclick="showInfo('notice')"><i class="fas fa-bell"></i> <span>Notice</span></a>
+        <!-- <a href="#" onclick="showInfo('appointment')"><i class="fas fa-calendar-check"></i> <span>Appointment Info.</span></a> -->
+
+        <!-- Campaign Info with Accordion -->
+        <button class="accordion"><i class="fas fa-bullhorn"></i> <span>Campaign Info</span></button>
+        <div class="panel">
+            <a href="#" onclick="loadContent('/Shamik/existing_campaigns.html')">All Campaigns</a>
+            <a href="#" onclick="loadContent('/Shamik/campaign.html')">Add Campaign</a>
+            <!-- <a href="#">Campaign Reports</a> -->
+        </div>
+
+        <!-- Vaccine Center Info with Accordion -->
+        <button class="accordion"><i class="fas fa-hospital"></i> <span>Vaccine Center Info.</span></button>
+        <div class="panel">
+            <a href="#" onclick="loadContent('/Sabrina/centreshow.html')">All Centers</a>
+            <a href="#" onclick="loadContent('/Sabrina/centre.html')">Add Center</a>
+
+            <!-- <a href="#">Center Reports</a> -->
+        </div>
+
+        <!-- Vaccine Info with Accordion -->
+        <button class="accordion"><i class="fas fa-syringe"></i> <span>Vaccine Info.</span></button>
+        <div class="panel">
+            <a href="#" onclick="loadContent('vaccine_inventory_list.html')">All Vaccines</a>
+            <a href="#" onclick="loadContent('vaccineinventory.html')">Add Vaccine</a>
+            <!-- <a href="#">Vaccine Reports</a> -->
+        </div>
+
+        <!-- Patient's Info with Accordion -->
+        <button class="accordion"><i class="fas fa-user"></i> <span>Patient's Info.</span></button>
+        <div class="panel">
+            <a href="#" onclick="loadContent('/Abdullah/patiant_info.html')">All Patients </a>
+            <a href="#" onclick="loadContent('/Abdullah/patient_vaccine.html')">Add Vax Destails of Patient</a>
+            <!-- <a href="#">Patient Reports</a> -->
+        </div>
+
+        <!-- <a href="#" onclick="showInfo('doctor')"><i class="fas fa-user-md"></i> <span>Doctor Info.</span></a> -->
+        <a href="#" onclick="loadContent('/Shamik/notice.html')"><i class="fas fa-bell"></i> <span>Notice</span></a>
     </div>
 
     <!-- Main Content -->
@@ -78,9 +117,12 @@
             <div class="footer-column">
                 <h5>Connect with Us</h5>
                 <ul class="list-inline">
-                    <li class="list-inline-item"><a href="#"><img src="/Abdullah/Images/facebook.png" alt="Facebook" class="social-icon"></a></li>
-                    <li class="list-inline-item"><a href="#"><img src="/Abdullah/Images/twitter.png" alt="Twitter" class="social-icon"></a></li>
-                    <li class="list-inline-item"><a href="#"><img src="/Abdullah/Images/instagram.png" alt="Instagram" class="social-icon"></a></li>
+                    <li class="list-inline-item"><a href="#"><img src="/Abdullah/Images/facebook.png" alt="Facebook"
+                                class="social-icon"></a></li>
+                    <li class="list-inline-item"><a href="#"><img src="/Abdullah/Images/twitter.png" alt="Twitter"
+                                class="social-icon"></a></li>
+                    <li class="list-inline-item"><a href="#"><img src="/Abdullah/Images/instagram.png" alt="Instagram"
+                                class="social-icon"></a></li>
                 </ul>
             </div>
             <div class="footer-column">
@@ -120,13 +162,68 @@
             var mainContent = document.getElementById('main-content');
             var xhr = new XMLHttpRequest();
             xhr.open('GET', url, true);
-            xhr.onreadystatechange = function() {
+            xhr.onreadystatechange = function () {
                 if (xhr.readyState === 4 && xhr.status === 200) {
                     mainContent.innerHTML = xhr.responseText;
+                    attachEventListeners(); // Attach event listeners after loading new content
                 }
             };
             xhr.send();
         }
+
+        function attachEventListeners() {
+            // Attach the event listener to the dynamically added form
+            const form = document.getElementById('vaccineForm');
+            if (form) {
+                const tableBody = document.getElementById('vaccineTableBody');
+
+                form.addEventListener('submit', function (event) {
+                    event.preventDefault();
+
+                    const patientName = document.getElementById('patientName').value;
+                    const age = document.getElementById('age').value;
+                    const vaccineName = document.getElementById('vaccineName').value;
+                    const vaccineDate = document.getElementById('vaccineDate').value;
+                    const sideEffects = document.getElementById('sideEffects').value;
+
+                    const newRow = document.createElement('tr');
+                    newRow.innerHTML = `
+                        <td>${patientName}</td>
+                        <td>${age}</td>
+                        <td>${vaccineName}</td>
+                        <td>${vaccineDate}</td>
+                        <td>${sideEffects}</td>
+                    `;
+
+                    tableBody.appendChild(newRow);
+
+                    // Clear form fields
+                    form.reset();
+                });
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var acc = document.getElementsByClassName("accordion");
+            var i;
+
+            for (i = 0; i < acc.length; i++) {
+                acc[i].addEventListener("click", function () {
+                    this.classList.toggle("active");
+                    var panel = this.nextElementSibling;
+                    if (panel.style.display === "block") {
+                        panel.style.display = "none";
+                    } else {
+                        panel.style.display = "block";
+                    }
+                });
+            }
+
+            attachEventListeners(); // Attach event listeners on initial load
+        });
     </script>
+     <script src="patient_info.js"></script>
+
 </body>
+
 </html>
