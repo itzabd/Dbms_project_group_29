@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Vaccine Information</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="patient_vaccine.css">
+</head>
+<body>
+    <header class="header-custom text-white text-center py-3">
+        <h1>Patient Vaccine Information</h1>
+    </header>
+
+    <div class="main-container mx-auto mt-5 d-flex justify-content-center">
+        <div class="vaccine-form mr-3" style="max-width: 500px;">
+            <h2 class="text-center mb-4">Add Vaccine for Patient</h2>
+            <form id="vaccineForm">
+                <div class="form-group">
+                    <label for="patientName">Patient Name</label>
+                    <input type="text" id="patientName" name="patientName" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="vaccineName">Vaccine Name</label>
+                    <input type="text" id="vaccineName" name="vaccineName" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="doseNumber">Dose Number</label>
+                    <input type="number" id="doseNumber" name="doseNumber" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="timeDate">Time and Date</label>
+                    <input type="datetime-local" id="timeDate" name="timeDate" class="form-control" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Add Vaccine</button>
+            </form>
+        </div>
+
+        <div class="vaccine-table" style="max-width: 600px;">
+            <h2 class="text-center mb-4">Patient Vaccine Records</h2>
+            <table class="table table-bordered table-custom mt-3">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Patient Name</th>
+                        <th scope="col">Vaccine Name</th>
+                        <th scope="col">Dose Number</th>
+                        <th scope="col">Time and Date</th>
+                    </tr>
+                </thead>
+                <tbody id="vaccineTableBody">
+                    <!-- Vaccine records will be dynamically inserted here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="patient_vaccine.js"></script>
+</body>
+</html>
